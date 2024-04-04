@@ -4,28 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Data</title>
-  <!-- Include Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="card" style="display: flex; justify-content: center; align-items: center; height: 100vh">
+  <!-- Main Content -->
+  <div>
     <h1>Weather Data for Your City</h1>
-    <form id="weather-form"></form>
-      <label for="city">Enter a city: <input type="text" id="city" required></label>
-      <button type="submit" id="get-weather" class="btn btn-primary">Get Weather</button>
+    <!-- Corrected form tag -->
+    <form id="weather-form">
+      <label for="city-input">Enter a city: <input type="text" id="city-input" required></label>
+      <button type="submit" id="get-weather">Get Weather</button>
     </form>
+    <div id="city-name"></div>
+    <div id="city-region"></div>
+    <div id="city-country"></div>
+    <div id="time"></div>
+    <div id="temperature"></div>
+    <div id="weather-description"></div>
+    <div id="humidity"></div>
   </div>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <!-- Include Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-<!-- <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-</style> -->
