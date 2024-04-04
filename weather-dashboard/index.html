@@ -4,24 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Data</title>
+  <!-- Include Bootstrap CSS for styling and layout -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { text-align: center; }
+  </style>
 </head>
 <body>
   <!-- Main Content -->
-  <div>
-    <h1>Weather Data for Your City</h1>
-    <!-- Corrected form tag -->
+  <header>
+    <h1 style="background-color: #f2f2f2; padding: 20px; font-size: 50px;">Weather For Your City</h1>
     <form id="weather-form">
-      <label for="city-input">Enter a city: <input type="text" id="city-input" required></label>
-      <button type="submit" id="get-weather">Get Weather</button>
+      <label for="city-input" style="font-size: larger;">Enter a city:</label>
+      <input type="text" id="city-input" required style="font-size: larger;">
+      <button type="submit" id="get-weather" style="padding: 10px 20px; background-color: #06aff1; color: white; border: none; cursor: pointer;">Get Weather</button>
     </form>
-    <div id="city-name"></div>
-    <div id="city-region"></div>
-    <div id="city-country"></div>
-    <div id="time"></div>
-    <div id="temperature"></div>
-    <div id="weather-description"></div>
-    <div id="humidity"></div>
+  </header>
+  <section id="weather-data" class="container">
+    <div class="row">
+      <!-- City Information Card -->
+      <div class="col-md-6">
+        <div class="card" style="margin: 20px; border: 2px solid #06aff1; text-align: right; height: 200px">
+          <div class="card-body">
+            <p id="city-name" class="card-text"></p>
+            <p id="city-region" class="card-text"></p>
+            <p id="city-country" class="card-text"></p>
+            <p id="time" class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Weather Data Card -->
+      <div class="col-md-6">
+        <div class="card" style="margin: 20px; border: 2px solid #06aff1; text-align: left; height: 200px">
+          <div class="card-body">
+            <p id="temperature" class="card-text"></p>
+            <p id="weather-description" class="card-text"></p>
+            <p id="humidity" class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="forecast">
+    <h2>5-Day Forecast</h2>
+    <div class="row justify-content-center"> <!-- Centered row for columns -->
+      <!-- Forecast days -->
+      <div class="col-md-2">
+        <div class="card" style="height: 300px; border: 2px solid red;">
+          <div class="card-body" id="day-0">
+            <h5 class="date card-title"></h5>
+            <hr>
+            <p class="max-temp card-text"></p>
+            <p class="low-temp card-text"></p>
+            <p class="weather-description card-text"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other days -->
+      <div class="col-md-2">
+        <div class="card" style="height: 300px; border: 2px solid red;">
+          <div class="card-body" id="day-1">
+            <h5 class="date card-title"></h5>
+            <hr>
+            <p class="max-temp card-text"></p>
+            <p class="low-temp card-text"></p>
+            <p class="weather-description card-text"></p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card" style="height: 300px; border: 2px solid red;">
+        <div class="card-body" id="day-2">
+          <h5 class="date card-title"></h5>
+          <hr>
+          <p class="max-temp card-text"></p>
+          <p class="low-temp card-text"></p>
+          <p class="weather-description card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card" style="height: 300px; border: 2px solid red;">
+        <div class="card-body" id="day-3">
+          <h5 class="date card-title"></h5>
+          <hr>
+          <p class="max-temp card-text"></p>
+          <p class="low-temp card-text"></p>
+          <p class="weather-description card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card" style="height: 300px; border: 2px solid red;">
+        <div class="card-body" id="day-4">
+          <h5 class="date card-title"></h5>
+          <hr>
+          <p class="max-temp card-text"></p>
+          <p class="low-temp card-text"></p>
+          <p class="weather-description card-text"></p>
+        </div>
+      </div>
+    </div>
+    
   </div>
+  </section>
 
   <!-- Include jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
