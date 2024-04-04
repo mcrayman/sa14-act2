@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body { text-align: center; }
+    p { font-size: 20px; }
   </style>
 </head>
 <body>
@@ -16,15 +17,16 @@
     <h1 style="background-color: #f2f2f2; padding: 20px; font-size: 50px;">Weather For Your City</h1>
     <form id="weather-form">
       <label for="city-input" style="font-size: larger;">Enter a city:</label>
-      <input type="text" id="city-input" required style="font-size: larger;">
+      <input type="text" id="city-input" requi#06aff1 style="font-size: larger;">
       <button type="submit" id="get-weather" style="padding: 10px 20px; background-color: #06aff1; color: white; border: none; cursor: pointer;">Get Weather</button>
     </form>
   </header>
   <section id="weather-data" class="container">
-    <div class="row">
+    <h2 style="margin-top: 10px;">Current Weather</h2>
+    <div class="row" style="border: 2px solid #06aff1; margin: 10px;">
       <!-- City Information Card -->
       <div class="col-md-6">
-        <div class="card" style="margin: 20px; border: 2px solid #06aff1; text-align: right; height: 200px">
+        <div style="margin: 20px; text-align: right;">
           <div class="card-body">
             <p id="city-name" class="card-text"></p>
             <p id="city-region" class="card-text"></p>
@@ -35,11 +37,11 @@
       </div>
       <!-- Weather Data Card -->
       <div class="col-md-6">
-        <div class="card" style="margin: 20px; border: 2px solid #06aff1; text-align: left; height: 200px">
+        <div style="margin: 20px; text-align: left;">
           <div class="card-body">
             <p id="temperature" class="card-text"></p>
-            <p id="weather-description" class="card-text"></p>
             <p id="humidity" class="card-text"></p>
+            <img src="" id="weather-description" alt="weather icon">
           </div>
         </div>
       </div>
@@ -48,61 +50,61 @@
   
   <section id="forecast">
     <h2>5-Day Forecast</h2>
-    <div class="row justify-content-center"> <!-- Centered row for columns -->
+    <div class="row justify-content-center">
       <!-- Forecast days -->
       <div class="col-md-2">
-        <div class="card" style="height: 300px; border: 2px solid red;">
+        <div class="card" style="height: 300px; border: 2px solid #06aff1;">
           <div class="card-body" id="day-0">
             <h5 class="date card-title"></h5>
             <hr>
             <p class="max-temp card-text"></p>
             <p class="low-temp card-text"></p>
-            <p class="weather-description card-text"></p>
+            <img src="" alt="weather icon" id="weather-description">
           </div>
         </div>
       </div>
       <!-- Repeat for other days -->
       <div class="col-md-2">
-        <div class="card" style="height: 300px; border: 2px solid red;">
+        <div class="card" style="height: 300px; border: 2px solid #06aff1;">
           <div class="card-body" id="day-1">
             <h5 class="date card-title"></h5>
             <hr>
             <p class="max-temp card-text"></p>
             <p class="low-temp card-text"></p>
-            <p class="weather-description card-text"></p>
+            <img src="" alt="weather icon" id="weather-description">
           </div>
         </div>
     </div>
     <div class="col-md-2">
-      <div class="card" style="height: 300px; border: 2px solid red;">
+      <div class="card" style="height: 300px; border: 2px solid #06aff1;">
         <div class="card-body" id="day-2">
           <h5 class="date card-title"></h5>
           <hr>
           <p class="max-temp card-text"></p>
           <p class="low-temp card-text"></p>
-          <p class="weather-description card-text"></p>
+          <img src="" alt="weather icon" id="weather-description">
         </div>
       </div>
     </div>
     <div class="col-md-2">
-      <div class="card" style="height: 300px; border: 2px solid red;">
+      <div class="card" style="height: 300px; border: 2px solid #06aff1;">
         <div class="card-body" id="day-3">
           <h5 class="date card-title"></h5>
           <hr>
           <p class="max-temp card-text"></p>
           <p class="low-temp card-text"></p>
-          <p class="weather-description card-text"></p>
+          <img src="" alt="weather icon" id="weather-description">
         </div>
       </div>
     </div>
     <div class="col-md-2">
-      <div class="card" style="height: 300px; border: 2px solid red;">
+      <div class="card" style="height: 300px; border: 2px solid #06aff1;">
         <div class="card-body" id="day-4">
           <h5 class="date card-title"></h5>
           <hr>
           <p class="max-temp card-text"></p>
           <p class="low-temp card-text"></p>
-          <p class="weather-description card-text"></p>
+          <img src="" alt="weather icon" id="weather-description">
         </div>
       </div>
     </div>
